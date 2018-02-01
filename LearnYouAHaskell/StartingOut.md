@@ -13,7 +13,7 @@ or if you want a custom prompt, type the following
 : set prompt "blah-blah> "
 ```
 
-#### Arithmetic
+### Arithmetic
 Multiple arithmetic operations can be performed from within the ghci compiler. The following are examples of some of the arithmetic that can be performed:
 
 ```
@@ -23,7 +23,7 @@ Multiple arithmetic operations can be performed from within the ghci compiler. T
 > 12 - 6
 ```
 
-#### Boolean Logic
+### Boolean Logic
 Like most other programming synatax you can apply parentheses to group equations together and change the precedence of the operations.
 
 This interpreter allows you to evaluate boolean expressions aswell:
@@ -34,7 +34,7 @@ This interpreter allows you to evaluate boolean expressions aswell:
 > not False
 ```
 
-#### Testing for Equality
+### Testing for Equality
 You can test for equality in the following way:
 
 ```
@@ -45,7 +45,7 @@ You can test for equality in the following way:
 
 But just as a note you cannot use this across different data types
 
-#### Various Functions
+### Various Functions
 If you are incrementing something you can use the following built-in function:
 
 ```
@@ -74,7 +74,7 @@ We will be using the div function which takes two numbers and performs integer d
 9
 ```
 
-#### Creating Functions
+### Creating Functions
 We will now create a function in which we will double the input of the function and return it as output, for this particular example the code will be written in a file with the extension .hs:
 
 ```
@@ -89,7 +89,7 @@ So now lets make another function which takes two parameters as input, and retur
 doubleUs x y = x*2 + y*2
 ```
 
-#### Adding Complexity
+### Adding Complexity
 Let us now create another function which uses conditionals to change determine the output of the function.
 
 ```
@@ -99,6 +99,24 @@ doubleSmallNumber x = if x > 100
 ```
 
 So this function now will double the number if the given input is less than 100.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
