@@ -139,9 +139,34 @@ ghci> "Steve Buscemi" !! 6
 ghci> [9.4,33.2,96.2,11.2,23.25] !! 1
 33.2
 ```
+#### List Comparisons
+We can compare lists that same way we compare numbers and strings.
+By using '>, <, =='
 
-
-
+```
+ghci> [3,2,1] > [2,1,0]
+True
+ghci> [1,2,3] < [3,4,6]
+True
+ghci> [3,4,2] == [3,4,2]
+```
+#### Basic List Functions
+```
+ghci> head [5,4,3,2,1]
+ghci> tail [5,4,3,2,1]
+ghci> last [5,4,3,2,1]
+ghci> init [5,4,3,2,1]
+ghci> length [5,4,3,2,1]
+ghci> null [1,2,3]
+ghci> reverse [5,4,3,2,1]
+ghci> take 3 [5,4,3,2,1]
+ghci> drop 3 [8,6,4,2]
+ghci> minimum [8,4,2,1,5,6]
+ghci> maximum [1,9,2,3,4]
+ghci> sum [5,2,1,6,3,2,5,7]
+ghci> product [1,2,3,4,5,6]
+ghci> 4 `elem` [2,3,4,5]
+```
 
 
 
