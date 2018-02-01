@@ -100,17 +100,45 @@ doubleSmallNumber x = if x > 100
 
 So this function now will double the number if the given input is less than 100.
 
+### Introduction to Lists
+Now we will practice generating a few lists to mess around with.
+Notice that we are using 'let' to define a name inside of GHCI
 
+```
+ghci> let lostNumbers = [4,8,15,16,23,42]
+ghci> lostNumbers
+[4,8,15,16,23,42]
+```
+#### List Operations
+To put two lists together we will use the '++' operator:
 
+```
+ghci> [1,2,3,4] ++ [9,10,11,12]
+[1,2,3,4,9,10,11,12]
+ghci> "hello" ++ " " ++ "world"
+"hello world"
+```
 
+On the other hand we can append single characters to the list by using the ':' operator.
 
+```
+ghci> 5:[1,2,3,4,5]
+[5,1,2,3,4,5]
+```
 
+We can play around with prepending elements to an empty list:
+1:2:3:[] = [1,2,3]
 
+Lists my contain lists of lists in the following way:
+[] and [[]] and [[],[],[]]
 
-
-
-
-
+By using the '!!' operator you can pull off the value at n index.
+```
+ghci> "Steve Buscemi" !! 6
+'B'
+ghci> [9.4,33.2,96.2,11.2,23.25] !! 1
+33.2
+```
 
 
 
