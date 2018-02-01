@@ -76,15 +76,29 @@ We will be using the div function which takes two numbers and performs integer d
 
 #### Creating Functions
 We will now create a function in which we will double the input of the function and return it as output, for this particular example the code will be written in a file with the extension .hs:
+
 ```
 doubleMe x = x + x
 ```
 
+The function doubleMe takes as in put one parameter called x and returns the output 'x + x'.
 
+So now lets make another function which takes two parameters as input, and returns the doubled sum of both.
 
+```
+doubleUs x y = x*2 + y*2
+```
 
+#### Adding Complexity
+Let us now create another function which uses conditionals to change determine the output of the function.
 
+```
+doubleSmallNumber x = if x > 100
+                        then x
+                        else x*2
+```
 
+So this function now will double the number if the given input is less than 100.
 
 
 
