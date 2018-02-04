@@ -27,3 +27,73 @@ This function has the type of **[Char] -> [Char]** meaning that it maps from a s
 ```
 removeNonUppercase :: String -> String
 ```
+### Typesclasses 101
+What is the type signature of ```==```
+```
+ghci> :t (==)
+(==) :: (Eq a) => a -> a -> Bool
+```
+The equality operator is a function.
+
+```Eq``` is used for types that support equality testing
+Mainly for '==' or '/='
+```Ord``` is for types that have an ordering
+```
+ghci> :t (>)
+(>) :: (Ord a) => a -> a -> Bool
+```
+
+Ordering can be Greater than, Less then, and Equal to respectively.
+
+**show** will present the input as a string.
+```
+ghci> show 3
+"3"
+ghci> show 5.334
+"5.334"
+ghci> show True
+"True"
+```
+**Read** is the oposite of show. The read function takes a string and returns a type which is a member of Read.
+```
+ghci> read "True" || False
+True
+ghci> read "8.2" + 3.8
+12.0
+ghci> read "5" - 2
+3
+ghci> read "[1,2,3,4]" ++ [3]
+[1,2,3,4,3]
+```
+### Type Annotations
+We can use type annotations to say which type we want the read to be. Read will only produces a valid output if the input of the functions specifies a second operatoin which would give an idea of which type it wanted to produce.
+For specifying type use '::'
+```
+ghci> read "5" :: Int
+5
+ghci> read "5" :: Float
+5.0
+ghci> (read "5" :: Float) * 4
+20.0
+ghci> read "[1,2,3,4]" :: [Int]
+[1,2,3,4]
+ghci> read "(3, 'a')" :: (Int, Char)
+(3, 'a')
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
