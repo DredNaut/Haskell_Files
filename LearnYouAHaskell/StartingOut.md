@@ -216,6 +216,32 @@ let nouns = ["hobo","frog","pope"]
 let adjectives = ["lazy","grouchy","scheming"]
 [adjective ++ " " ++ nouns | adjective <- adjective, noun <- nouns]
 ```
+#### Tuples
+Tuples are a way to represent a two dimensional vector in Haskell, and a tuple can contain a combination of several types.
+**fst** takes a pair and returns its first complement.
+```
+ghci> fst (8,11)
+8
+```
+**snd** takes a pair and returns its second component.
+```
+ghci> snd (8,11)
+11
+```
+**zip** takes two lists and zips them together into one list by joining the matching elements into pairs.
+```
+ghci> zip [1..5] (take 5 (repeat 5))
+[(1,5),(2,5),(3,5),(4,5),(5,5)]
+```
+To find a list of right triangles we can use the following list comprehension.
+```
+[ (a,b,c) | c<- [1..10], b <- [1..10], a <- [1..10], a^2 + b^2 == c^2]
+```
+
+This concludes the **starting out** tutorial.
+
+
+
 
 
 
