@@ -167,13 +167,55 @@ ghci> sum [5,2,1,6,3,2,5,7]
 ghci> product [1,2,3,4,5,6]
 ghci> 4 `elem` [2,3,4,5]
 ```
+#### List ranges, cycles, repeat, and replicate
+To generate a range use the '..' in between the list brackets. 
+```
+ghci> [1..20]
+[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+```
+To create a cycle which is an infinite loop of the same list, you should always use take to split the list. 
+```
+ghci> take 10 (cycle [1,2,3])
+[1,2,3,1,2,3,1,2,3,1]
+```
+We can create a list of a certain pattern by using the repeat function in conjunction with the take function.
+```
+ghci> take 10 (repeat 5)
+[5,5,5,5,5,5,5,5,5,5]
+```
+And lastly we can use the function replicate to quickly make a list of one number.
+```
+ghci> replicate 3 10
+[10,10,10]
+```
 
-
-
-
-
-
-
+### List Comprehension
+Using the following we can create a list with the set of the first 10 even natural numbers.
+```
+take 10 [2,4..]
+```
+We can do the same thing using a list comprehension
+```
+[x*2 | x <- [1..10]]
+```
+Now we can add a predicate to that previous comprehension, predicates after binding parts are separated by a comma.
+```
+[x*2 | x <- [1..10], x*2 >= 12]
+```
+This comprehension will result in the elements 1-10 which doubled yeild a value greater than 12
+```
+[x | x <- [10..20], x /= 13, x /=15, x /= 19]
+```
+We can also do list multiplication in the following way
+```
+[x*y | x <- [2,5,10], y <- [8,10,11]]
+```
+List comprehensions that combines a list of adjectives and a list of nouns
+```
+let nouns = ["hobo","frog","pope"]
+let adjectives = ["lazy","grouchy","scheming"]
+[adjective ++ " " ++ nouns | adjective <- adjective, noun <- nouns]
+```
 
 
 
