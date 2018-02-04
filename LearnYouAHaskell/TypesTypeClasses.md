@@ -81,9 +81,37 @@ ghci> read "(3, 'a')" :: (Int, Char)
 (3, 'a')
 ```
 
+```Enum``` members are sequentially ordered types - they can be enumerated. The main advantage is that we can use its types in list ranges.
+```
+ghci> ['a'..'e']
+"abcde"
+ghci> [LT..GT]
+[LT,EQ,GT]
+ghci> [3..5]
+[3,4,5]
+ghci> succ 'B'
+'C'
+```
 
+```Bounded``` members have an upper and lower bound.
+```
+ghci> minBound :: Int
+-2147483648
+ghci> maxBound :: Char
+'\1114111'
+```
 
+```Num``` is a numeric typeclass. Its members have the preperty of being aable to act like numbers. Let's examine the type of a number.
+```
+ghci> :t 20
+20 :: (Num t) => t
+```
+Another useful function to be used is the ```fromIntegral``` function which takes two inputs a number and an integral, this allows the use of adding an integer to a floating point number.
+```
+ghci fromIntegral (length [1,2,3,4]) + 3.2
+```
 
+This concludes this tutorial on ** Types and types classes**.
 
 
 
