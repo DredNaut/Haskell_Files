@@ -111,7 +111,7 @@ Another useful function to be used is the ```fromIntegral``` function which take
 ghci fromIntegral (length [1,2,3,4]) + 3.2
 ```
 
-This concludes this tutorial on ** Types and types classes**.
+This concludes this tutorial on **Types and types classes**.
 
 
 
